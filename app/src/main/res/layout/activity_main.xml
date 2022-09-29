@@ -7,9 +7,12 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="63dp"
-        android:layout_height="36dp"
+        android:id="@+id/textCel"
+        android:layout_width="150dp"
+        android:layout_height="47dp"
+        android:fontFamily="monospace"
         android:text="@string/celcius"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.164"
@@ -19,10 +22,11 @@
 
     <SeekBar
         android:id="@+id/sbCel"
-        android:layout_width="280dp"
-        android:layout_height="30dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         android:max="100"
         android:progress="0"
+        android:background="#F0F0F0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -31,10 +35,12 @@
         app:layout_constraintVertical_bias="0.275" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textFah"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:fontFamily="monospace"
         android:text="@string/fahrenheit"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.165"
@@ -43,10 +49,11 @@
 
     <SeekBar
         android:id="@+id/sbFah"
-        android:layout_width="280dp"
-        android:layout_height="30dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         android:max="212"
         android:progress="32"
+        android:background="#F0F0F0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +64,6 @@
         android:id="@+id/viewCel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Celcius Degree"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.82"
@@ -69,7 +75,6 @@
         android:id="@+id/viewFahren"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fahren Degree"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.812"
@@ -80,7 +85,8 @@
     <TextView
         android:id="@+id/msg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -89,6 +95,7 @@
         app:layout_constraintVertical_bias="0.799" />
 
     <RadioGroup
+        android:id="@+id/rg_language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,14 +107,16 @@
 
         <RadioButton
             android:id="@+id/rbtnEn"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:fontFamily="monospace"
             android:text="@string/english" />
 
         <RadioButton
             android:id="@+id/rbtnChn"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:fontFamily="monospace"
             android:text="@string/chinese" />
     </RadioGroup>
 

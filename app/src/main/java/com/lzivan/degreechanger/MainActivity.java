@@ -1,11 +1,18 @@
 package com.lzivan.degreechanger;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
     TextView celdegree;
     TextView fahdegree;
     TextView message;
+    TextView txCel;
+    TextView txFah;
+    RadioGroup rglanguage;
+    RadioButton rbChina, rbEnglish;
     int cel_degree;
     int fah_degree;
 
@@ -27,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         celdegree = findViewById(R.id.viewCel);
         fahdegree = findViewById(R.id.viewFahren);
         message = findViewById(R.id.msg);
+        txCel = findViewById(R.id.textCel);
+        txFah = findViewById(R.id.textFah);
+        rglanguage = findViewById(R.id.rg_language);
+        rbChina = findViewById(R.id.rbtnChn);
+        rbEnglish = findViewById(R.id.rbtnEn);
 
         seekCelcius.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -86,5 +102,47 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        rglanguage.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (i){
+                    case R.id.rbtnEn:
+                        String language = "en";
+
+                        setlocale(language);
+
+                        break;
+                    case R.id.rbtnChn:
+
+                        setlocale("zh");
+                        break;
+
+                }
+            }
+        });
     }
+
+    private void setlocale(String language) {
+        Resources resources = getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        Configuration configuration = resources.getConfiguration();
+        configuration.locale = new Locale(language);
+        resources.updateConfiguration(configuration,metrics);
+        onConfigurationChanged(configuration);
+
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+
+        super.onConfigurationChanged(newConfig);
+
+        txCel.setText(R.string.celcius);
+        txFah.setText(R.string.fahrenheit);
+        rbEnglish.setText(R.string.english);
+        rbChina.setText(R.string.chinese);
+
+    }
+
 }
