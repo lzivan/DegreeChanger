@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="63dp"
         android:layout_height="36dp"
-        android:text="Celcius"
+        android:text="@string/celcius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.164"
@@ -34,7 +34,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fahrenheit"
+        android:text="@string/fahrenheit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.165"
@@ -81,12 +81,34 @@
         android:id="@+id/msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.799" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024">
+
+        <RadioButton
+            android:id="@+id/rbtnEn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/english" />
+
+        <RadioButton
+            android:id="@+id/rbtnChn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chinese" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

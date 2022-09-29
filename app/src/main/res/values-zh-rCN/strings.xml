@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DegreeChanger</string>
+    <string name="celcius">摄氏度</string>
+    <string name="english">英语</string>
+    <string name="chinese">中文</string>
+    <string name="fahrenheit">华氏度</string>
+    <string name="message1">要是能暖和点就好了</string>
+    <string name="message2">要是能凉爽点就好了</string>
+</resources>

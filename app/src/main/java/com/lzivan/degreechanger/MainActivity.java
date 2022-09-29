@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 seekFahren.setProgress(fah_degree);
 
                 if (cel_degree <= 20){
-                    message.setText("I wish it were warmer");
+                    message.setText(R.string.message1);
                 }else{
-                    message.setText("I wish it were colder");
+                    message.setText(R.string.message2);
                 }
             }
 

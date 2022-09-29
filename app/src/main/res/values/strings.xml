@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DegreeChanger</string>
+    <string name="message1">I wish it were warmer</string>
+    <string name="message2">I wish it were colder</string>
+
+    <string name="celcius">Celcius</string>
+    <string name="english">English</string>
+    <string name="chinese">Chinese</string>
+    <string name="fahrenheit">Fahrenheit</string>
+
 </resources>
