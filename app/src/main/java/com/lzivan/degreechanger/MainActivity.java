@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 cel_degree = progress;
                 celdegree.setText("" + cel_degree);
 
+
                 double fd = (cel_degree * 1.80 + 32);
                 fah_degree = (cel_degree*9/5)+32;
                 fahdegree.setText("" + Math.round(fd * 100.00) / 100.00);
@@ -84,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                     cel_degree = (fah_degree - 32) * 5 / 9;
-
-                    celdegree.setText("" + Math.round(((fah_degree - 32) / 1.8) * 100.00) / 100.00);
+                    double cd = (fah_degree - 32) / 1.8;
+                    celdegree.setText("" + Math.round(cd * 100.00) / 100.00);
                     seekCelcius.setProgress(cel_degree);
 
 
@@ -142,6 +143,14 @@ public class MainActivity extends AppCompatActivity {
         txFah.setText(R.string.fahrenheit);
         rbEnglish.setText(R.string.english);
         rbChina.setText(R.string.chinese);
+        if (message.getText().toString().equals("I wish it were warmer") ||
+                message.getText().toString().equals("要是能暖和点就好了")){
+            message.setText(R.string.message1);
+        }
+        if (message.getText().toString().equals("I wish it were colder") ||
+                message.getText().toString().equals("要是能凉爽点就好了")){
+            message.setText(R.string.message2);
+        }
 
     }
 
